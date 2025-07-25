@@ -18,7 +18,6 @@ Deze applicatie is een eenvoudige Qt-gebaseerde GUI waarmee je DICOM C-FIND quer
 
 ## Vereisten
 
-- Python 3.12
 - PySide6
 - pydicom
 - pynetdicom
