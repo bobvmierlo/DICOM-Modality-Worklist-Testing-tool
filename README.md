@@ -27,3 +27,12 @@ Deze applicatie is een eenvoudige Qt-gebaseerde GUI waarmee je DICOM C-FIND quer
 
 ```bash
 pyinstaller main.py --onefile --noconsole --name DMWL_CFinder
+```
+
+## Licentie & Rechten
+Deze applicatie is ontwikkeld voor gebruik in een ziekenhuis/testomgeving. Gebruik op eigen risico.
+
+Auteursrechten:
+© 2025 Bob van Mierlo. Alle rechten voorbehouden.
+
+Je mag de code en applicatie vrij gebruiken, aanpassen en delen voor niet-commerciële doeleinden. Voor commerciële toepassing of distributie is toestemming vereist.
