@@ -2,7 +2,7 @@
 
 This application is a simple Qt-based GUI that allows you to perform DICOM C-FIND queries on a Modality Worklist (DMWL) service. It helps test or verify modality integrations with a PACS/RIS system.
 
-> 🇳🇱 This project is originally designed in Dutch, the GUI therefore is also Dutch. The README is also available in Dutch: [README_nl.md](README.nl.md)
+> 🇳🇱 This project is originally designed in Dutch, the GUI therefore is also Dutch. The README is also available in Dutch: [README_nl.md](README_nl.md)
 
 ## Features
 
