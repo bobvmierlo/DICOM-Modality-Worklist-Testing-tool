@@ -1,30 +1,28 @@
 # DICOM Modality Worklist (DMWL) Query Tool
 
-This application is a simple Qt-based GUI that allows you to perform DICOM C-FIND queries on a Modality Worklist (DMWL) service. It helps test or verify modality integrations with a PACS/RIS system.
+Deze applicatie is een eenvoudige Qt-gebaseerde GUI waarmee je DICOM C-FIND queries kunt uitvoeren op een Modality Worklist (DMWL) service. Dit helpt bij het testen of verifiëren van modality-integraties met een PACS/RIS-systeem.
 
-> 🇳🇱 This project is originally designed in Dutch, the GUI therefore is also Dutch. The README is also available in Dutch: [README.nl.md](README.nl.md)
+## Functionaliteiten
 
-## Features
-
-- GUI with input fields for:
-  - Last name (supports wildcards)
+- GUI met invoervelden voor:
+  - Achternaam (ondersteunt wildcards)
   - Patient ID
   - Accession Number
   - Modality
-- Results are displayed in an interactive table
-- Double-clicking a row shows the full DICOM object (in JSON format)
-- All connection settings are configurable in `resources/settings.json`:
+- Resultaten worden getoond in een interactieve tabel
+- Dubbelklikken op een regel toont het volledige DICOM-object (in JSON)
+- Alle connectiegegevens configureerbaar in `resources/settings.json`:
   - PACS IP
-  - Port
-  - AE Titles (caller and called)
+  - Poort
+  - AE Titles (zender en ontvanger)
 
-## Requirements
+## Vereisten
 
 - PySide6
 - pydicom
 - pynetdicom
 
-## Building a Windows .exe
+## Zelf builden .exe in Windows
 
 ```bash
 py -m PyInstaller --noconfirm --onefile --windowed --icon=resources/icon.ico main.py
@@ -39,22 +37,13 @@ py -m PyInstaller --noconfirm --onefile --windowed --icon=resources/icon.ico mai
 ### Mock Server
 De mock_dmwl_server.exe kan gestart worden om te testen, deze start een simpele DMWL service op met 4 voorbeeld patiënten. De terminal geeft ook volledige debug output, zodat je kunt zien wat de DMWL tool opvraagt.
 
-## Usage
-- In the releases section, you'll find a release_bundle.zip. Extract this locally, for example to C:\DMWL-tool.
-- Run main.exe (Windows will show a SmartScreen warning because the app is unsigned). Make sure the resources folder is in the same directory as the executable.
-- You can search using the fields; wildcards are allowed.
-- Double-clicking a row in the table shows more DICOM details.
+## Licentie & Rechten
+Deze applicatie is ontwikkeld voor gebruik in een ziekenhuis/testomgeving. Gebruik op eigen risico.
 
-### Mock Server
-You can run mock_dmwl_server.exe to test the application. This starts a simple DMWL SCP with 4 example patients. The terminal shows full debug output so you can see what is queried by the tool.
+Auteursrechten:
+© 2025 Bob van Mierlo. Alle rechten voorbehouden.
 
-### License & Disclaimer
-This application is intended for use in a hospital or test environment. Use at your own risk.
-
-Copyright:
-© 2025 Bob van Mierlo. All rights reserved.
-
-You may freely use, modify, and share the code and application for non-commercial purposes. For commercial use or redistribution, permission is required.
+Je mag de code en applicatie vrij gebruiken, aanpassen en delen voor niet-commerciële doeleinden. Voor commerciële toepassing of distributie is toestemming vereist.
 
 ### Third party licenses
 This application uses PyQt6, which is licensed under the GPLv3. As such, the entire application is subject to the terms of the GPLv3 license.
