@@ -10,7 +10,7 @@ Deze applicatie is een eenvoudige Qt-gebaseerde GUI waarmee je DICOM C-FIND quer
   - Accession Number
   - Modality
 - Resultaten worden getoond in een interactieve tabel
-- Dubbelklikken op een regel toont het volledige DICOM-object (in JSON)
+- Dubbelklikken op een regel toont het volledige DICOM-object
 - Alle connectiegegevens configureerbaar in `resources/settings.json`:
   - PACS IP
   - Poort

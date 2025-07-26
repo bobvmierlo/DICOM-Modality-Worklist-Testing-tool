@@ -12,7 +12,7 @@ This application is a simple Qt-based GUI that allows you to perform DICOM C-FIN
   - Accession Number
   - Modality
 - Results are displayed in an interactive table
-- Double-clicking a row shows the full DICOM object (in JSON format)
+- Double-clicking a row shows the full DICOM object
 - All connection settings are configurable in `resources/settings.json`:
   - PACS IP
   - Port
