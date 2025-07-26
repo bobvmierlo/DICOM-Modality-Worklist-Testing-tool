@@ -28,6 +28,14 @@ Deze applicatie is een eenvoudige Qt-gebaseerde GUI waarmee je DICOM C-FIND quer
 pyinstaller main.py --onefile --noconsole --name DMWL_CFinder
 ```
 
+## Gebruik
+- Main.exe kan op Windows gestart worden (geef wel SmartScreen melding, omdat de applicatie niet ondertekend is)
+- Er kan gezocht worden op een aantal velden, wildcards zijn ook toegestaan
+- Door te dubbelklikken op een regel in de tabel krijg je meer DICOM details te zien
+
+### Mock Server
+De mock_dmwl_server.exe kan gestart worden om te testen, deze start een simpele DMWL service op met 4 voorbeeld patiënten. De terminal geeft ook volledige debug output, zodat je kunt zien wat de DMWL tool opvraagt.
+
 ## Licentie & Rechten
 Deze applicatie is ontwikkeld voor gebruik in een ziekenhuis/testomgeving. Gebruik op eigen risico.
 
