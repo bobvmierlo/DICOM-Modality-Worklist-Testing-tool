@@ -37,13 +37,13 @@ jobs:
         copy dist\main.exe dist_bundle\
         copy dist\mock_dmwl_server.exe dist_bundle\
         xcopy /E /I /Y resources dist_bundle\resources
-        powershell Compress-Archive -Path dist_bundle\* -DestinationPath release_bundle.zip
+        powershell Compress-Archive -Path dist_bundle\* -DestinationPath DMWL-testing-tool.zip
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v2
       with:
         name: Release ${{ github.ref_name }}
         tag_name: ${{ github.ref_name }}
-        files: release_bundle.zip
+        files: DMWL-testing-tool.zip
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
