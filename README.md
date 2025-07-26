@@ -25,7 +25,7 @@ Deze applicatie is een eenvoudige Qt-gebaseerde GUI waarmee je DICOM C-FIND quer
 ## Builden .exe in Windows
 
 ```bash
-pyinstaller main.py --onefile --noconsole --name DMWL_CFinder
+py -3.12 -m PyInstaller --noconfirm --onefile --windowed --icon=resources/icon.ico main.py
 ```
 
 ## Gebruik
