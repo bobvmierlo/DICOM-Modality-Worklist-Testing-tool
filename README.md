@@ -22,14 +22,14 @@ Deze applicatie is een eenvoudige Qt-gebaseerde GUI waarmee je DICOM C-FIND quer
 - pydicom
 - pynetdicom
 
-## Builden .exe in Windows
+## Zelf builden .exe in Windows
 
 ```bash
-py -3.12 -m PyInstaller --noconfirm --onefile --windowed --icon=resources/icon.ico main.py
+py -m PyInstaller --noconfirm --onefile --windowed --icon=resources/icon.ico main.py
 ```
 
 ## Gebruik
-- In de releases staat een main.zip als download, welke de applicatie en resources map bevat. Pak deze uit op je lokale pc naar bijv C:\DMWL-tool
+- In de releases staat een release_bundle.zip, deze bevat de applicatie, mock server en resources map. Pak deze uit op je lokale pc naar bijv C:\DMWL-tool
 - Main.exe kan op Windows gestart worden (geef wel SmartScreen melding, omdat de applicatie niet ondertekend is), zorg er voor dat de resources map in dezelfde map staat.
 - Er kan gezocht worden op een aantal velden, wildcards zijn ook toegestaan
 - Door te dubbelklikken op een regel in de tabel krijg je meer DICOM details te zien
