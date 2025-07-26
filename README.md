@@ -29,7 +29,8 @@ pyinstaller main.py --onefile --noconsole --name DMWL_CFinder
 ```
 
 ## Gebruik
-- Main.exe kan op Windows gestart worden (geef wel SmartScreen melding, omdat de applicatie niet ondertekend is)
+- In de releases staat een main.zip als download, welke de applicatie en resources map bevat. Pak deze uit op je lokale pc naar bijv C:\DMWL-tool
+- Main.exe kan op Windows gestart worden (geef wel SmartScreen melding, omdat de applicatie niet ondertekend is), zorg er voor dat de resources map in dezelfde map staat.
 - Er kan gezocht worden op een aantal velden, wildcards zijn ook toegestaan
 - Door te dubbelklikken op een regel in de tabel krijg je meer DICOM details te zien
 
