@@ -1,0 +1,47 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'   # Triggert alleen bij tags als v1.0.0
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install pyinstaller
+      run: pip install pyinstaller
+
+    - name: Build main.py as main.exe
+      run: |
+        py -3.12 -m PyInstaller --noconfirm --onefile --windowed --icon=resources/icon.ico main.py
+
+    - name: Build mock_dmwl_server.py as mock_dmwl_server.exe
+      run: |
+        py -3.12 -m PyInstaller --noconfirm --onefile mock_dmwl_server.py
+
+    - name: Prepare ZIP
+      run: |
+        mkdir dist_bundle
+        copy dist\main.exe dist_bundle\
+        copy dist\mock_dmwl_server.exe dist_bundle\
+        xcopy /E /I /Y resources dist_bundle\resources
+        powershell Compress-Archive -Path dist_bundle\* -DestinationPath release_bundle.zip
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        name: Release ${{ github.ref_name }}
+        tag_name: ${{ github.ref_name }}
+        files: release_bundle.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
