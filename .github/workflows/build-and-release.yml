@@ -26,7 +26,7 @@ jobs:
 
     - name: Build main.py as main.exe
       run: |
-        py -3.12 -m PyInstaller --noconfirm --onefile --windowed --icon=resources/icon.ico main.py
+        py -3.12 -m PyInstaller --noconfirm --onefile --windowed --icon=resources/icon.ico --name=DMWL-test-tool main.py
 
     - name: Build mock_dmwl_server.py as mock_dmwl_server.exe
       run: |
